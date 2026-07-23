@@ -2,7 +2,7 @@ import {test} from "@playwright/test"
 import LoginPage from "../../Pages/login.page"
 import LoginData from "../../testData/loginData.json"
 
- test.only('Optimized login feature', async ({page}) => { 
+ test('Optimized login feature', async ({page}) => { 
     let loginpage= new LoginPage(page)
 
     let url=LoginData.url
@@ -16,7 +16,7 @@ import LoginData from "../../testData/loginData.json"
    await loginpage.enterPassword(pwd)
    await loginpage.clickLogin()
    await page.waitForTimeout(2000)
-   
+
    //Approach2: Combine and call POM methods
    //await loginpage.loginProcess(un,pwd)
  })
