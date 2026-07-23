@@ -18,6 +18,6 @@ import LoginData from "../../testData/loginData.json"
    await page.waitForTimeout(2000)
 
    //Approach2: Combine and call POM methods
-   //await loginpage.loginProcess(un,pwd)
+   await loginpage.loginProcess(un,pwd)
       
 })
